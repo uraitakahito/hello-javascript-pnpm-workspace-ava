@@ -1,0 +1,13 @@
+{
+  "name": "named-exports-no-default",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "devDependencies": {},
+  "scripts": {
+    "cleandep": "rm -rf node_modules dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
