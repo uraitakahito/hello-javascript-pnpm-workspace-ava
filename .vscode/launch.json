@@ -1,0 +1,44 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    //
+    // NOTE:
+    //
+    // The difference between args and runtimeArgs in VSCode's launch.json
+    // https://stackoverflow.com/questions/42207740/what-is-the-difference-between-args-and-runtimeargs-in-vscodes-launch-json
+    //
+
+    {
+      "name": "run selected file",
+      "type": "node",
+      "request": "launch",
+      "skipFiles": ["<node_internals>/**"],
+      // program - an absolute path to the Node.js program to debug.
+      // ${file} - the currently open file.
+      "program": "${file}",
+      // break immediately when the program launches
+      "stopOnEntry": true
+    },
+    {
+      "name": "Debug current file with AVA(pnpm)",
+      "type": "node",
+      "request": "launch",
+
+      //
+      // Binstubs (files in node_modules/.bin) are always shell files, not symlinks to JS files.
+      // If you expect the file to be a JS file, reference the original file directly instead, as described:
+      // https://github.com/pnpm/pnpm/issues/736
+      //
+      "runtimeExecutable": "sh",
+
+      "program": "${workspaceRoot}/node_modules/.bin/ava",
+      "args": ["${relativeFile}", "--runInBand"],
+      "console": "integratedTerminal",
+      // the visibility of the Debug Console panel during a debugging session.
+      "internalConsoleOptions": "neverOpen",
+      "env": {
+        "NODE_OPTIONS": "--experimental-vm-modules"
+      },
+    }
+  ]
+}
