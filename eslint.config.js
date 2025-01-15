@@ -33,7 +33,6 @@ export default [
           'ignoreClassFieldInitialValues': true,
         }
       ],
-      // 'no-magic-numbers': ['error', { 'ignore': [1] }],
 
       // https://eslint.org/docs/latest/rules/one-var
       'one-var': ['error', 'never'],
