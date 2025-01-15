@@ -20,7 +20,7 @@
       "stopOnEntry": true
     },
     {
-      "name": "Debug current file with AVA(pnpm)",
+      "name": "Debug current file in ava-example(pnpm)",
       "type": "node",
       "request": "launch",
 
@@ -31,14 +31,14 @@
       //
       "runtimeExecutable": "sh",
 
-      "program": "${workspaceRoot}/node_modules/.bin/ava",
+      "program": "${workspaceRoot}/packages/ava-example/node_modules/.bin/ava",
       "args": ["${relativeFile}", "--runInBand"],
       "console": "integratedTerminal",
       // the visibility of the Debug Console panel during a debugging session.
       "internalConsoleOptions": "neverOpen",
       "env": {
         "NODE_OPTIONS": "--experimental-vm-modules"
-      },
+      }
     }
   ]
 }

@@ -1,0 +1,17 @@
+{
+  "name": "ava-example",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "cleandep": "rm -rf node_modules dist",
+    "test": "ava"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ava": "^6.2.0"
+  }
+}
