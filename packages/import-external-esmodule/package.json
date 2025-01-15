@@ -1,5 +1,5 @@
 {
-  "name": "using-external-commonjs",
+  "name": "import-external-esmodule",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,6 +12,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@uraitakahito/hello-commonjs": "^1.0.8"
+    "@uraitakahito/hello-esmodule": "^1.0.2"
   }
 }

@@ -15,25 +15,33 @@ importers:
         specifier: ^15.14.0
         version: 15.14.0
 
-  packages/named-exports-no-default: {}
-
-  packages/using-external-commonjs:
-    dependencies:
-      '@uraitakahito/hello-commonjs':
-        specifier: ^1.0.8
-        version: 1.0.8
-
-  packages/using-external-esmodule:
+  packages/import-external-esmodule:
     dependencies:
       '@uraitakahito/hello-esmodule':
         specifier: ^1.0.2
         version: 1.0.2
 
-  packages/using-internal-esmodule:
+  packages/import-internal-esmodule:
     dependencies:
       named-exports-no-default:
         specifier: workspace:*
         version: link:../named-exports-no-default
+      named-exports-with-default:
+        specifier: workspace:*
+        version: link:../named-exports-with-default
+
+  packages/local-import-checker:
+    dependencies:
+      '@uraitakahito/hello-commonjs':
+        specifier: ^1.0.8
+        version: 1.0.8
+      '@uraitakahito/hello-esmodule':
+        specifier: ^1.0.2
+        version: 1.0.2
+
+  packages/named-exports-no-default: {}
+
+  packages/named-exports-with-default: {}
 
 packages:
 

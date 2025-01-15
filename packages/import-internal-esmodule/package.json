@@ -1,0 +1,17 @@
+{
+  "name": "import-internal-esmodule",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "cleandep": "rm -rf node_modules dist"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "description": "",
+  "dependencies": {
+    "named-exports-no-default": "workspace:*",
+    "named-exports-with-default": "workspace:*"
+  }
+}

@@ -1,17 +1,16 @@
 {
-  "name": "using-external-esmodule",
+  "name": "local-import-checker",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
     "cleandep": "rm -rf node_modules dist"
   },
-  "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "Apache-2.0",
+  "description": "",
   "dependencies": {
+    "@uraitakahito/hello-commonjs": "^1.0.8",
     "@uraitakahito/hello-esmodule": "^1.0.2"
   }
 }
